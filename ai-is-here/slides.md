@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: https://cover.sli.dev
+background: /title-background.png
 title: AI is Here
 info: |
   ## AI is Here
@@ -8,22 +8,21 @@ info: |
   
   A presentation about practical AI integration in software development,
   covering characteristics, limitations, and real-world applications.
-class: text-center
+class: text-center slide-ai-intro
 drawings:
   persist: false
 transition: slide-left
 mdc: true
 colorSchema: auto
 themeConfig:
-  primary: '#3b82f6'
-  secondary: '#1e40af'
-  accent: '#f59e0b'
-  neutral: '#374151'
+  primary: '#0ea5e9'
+  secondary: '#1e293b'
+  accent: '#22c55e'
+  neutral: '#64748b'
 css: unocss
 highlighter: shiki
 lineNumbers: true
 layout: cover
-transition: fade-out
 fonts:
   sans: 'Inter, ui-sans-serif, system-ui'
   serif: 'ui-serif, Georgia'
@@ -34,19 +33,51 @@ seoMeta:
 
 # AI is Here
 
-Introducing AI tools and workflows for Product Engineering Teams
-
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
+<div class="flex items-center justify-center mb-8">
+  <div class="mr-4">
+    <carbon:code class="text-6xl text-blue-400" />
+  </div>
+  <div class="text-lg text-gray-300">Introducing AI tools and workflows for</div>
 </div>
 
-<div class="abs-br m-6 text-xl">
+## Product Engineering Teams
+
+<div class="flex justify-center mt-8 space-x-3">
+  <div v-motion :initial="{ opacity: 0, y: 50 }" :enter="{ opacity: 1, y: 0, transition: { delay: 500 } }" class="feature-card px-3 py-3 rounded-lg">
+    <carbon:code class="text-2xl mb-2 tech-icon" />
+    <div class="text-sm font-medium">Code Review</div>
+  </div>
+  <div v-motion :initial="{ opacity: 0, y: 50 }" :enter="{ opacity: 1, y: 0, transition: { delay: 700 } }" class="feature-card px-3 py-3 rounded-lg">
+    <carbon:test-tool class="text-2xl mb-2 tech-icon" />
+    <div class="text-sm font-medium">Testing</div>
+  </div>
+  <div v-motion :initial="{ opacity: 0, y: 50 }" :enter="{ opacity: 1, y: 0, transition: { delay: 900 } }" class="feature-card px-3 py-3 rounded-lg">
+    <carbon:debug class="text-2xl mb-2 tech-icon" />
+    <div class="text-sm font-medium">Debugging</div>
+  </div>
+  <div v-motion :initial="{ opacity: 0, y: 50 }" :enter="{ opacity: 1, y: 0, transition: { delay: 1100 } }" class="feature-card px-3 py-3 rounded-lg">
+    <carbon:task class="text-2xl mb-2 tech-icon" />
+    <div class="text-sm font-medium">Requirements</div>
+  </div>
+  <div v-motion :initial="{ opacity: 0, y: 50 }" :enter="{ opacity: 1, y: 0, transition: { delay: 1300 } }" class="feature-card px-3 py-3 rounded-lg">
+    <carbon:document class="text-2xl mb-2 tech-icon" />
+    <div class="text-sm font-medium">Documentation</div>
+  </div>
+  <div v-motion :initial="{ opacity: 0, y: 50 }" :enter="{ opacity: 1, y: 0, transition: { delay: 1500 } }" class="feature-card px-3 py-3 rounded-lg">
+    <carbon:education class="text-2xl mb-2 tech-icon" />
+    <div class="text-sm font-medium">Learning</div>
+  </div>
+</div>
+
+<div v-motion :initial="{ opacity: 0, y: 20 }" :enter="{ opacity: 1, y: 0, transition: { delay: 1700 } }" @click="$slidev.nav.next" class="nav-button mt-12 py-3 px-6 rounded-lg cursor-pointer">
+  <carbon:arrow-right class="inline mr-2" />
+  Press Space or click to continue
+</div>
+
+<div class="abs-br m-6 text-xl opacity-60">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
-    <carbon:logo-github />
-  </a>
 </div>
 
 <!--
@@ -55,23 +86,40 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 transition: fade-out
+layout: two-cols
+class: ai-circuit-bg
 ---
 
-# What is Slidev?
+# AI-Powered Presentations
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+<div class="flex items-center mb-6">
+  <div class="text-4xl mr-3">🧠</div>
+  <div>Just like our AI friend, modern presentation tools are getting smarter</div>
+</div>
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
+Slidev represents the evolution of developer presentations:
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+- 🤖 **AI-Assisted** - leverage AI for content creation and code examples  
+- 📝 **Text-based** - focus on content with Markdown, style with AI suggestions
+- 🎨 **Intelligent Theming** - AI-optimized themes and color schemes
+- 🧑‍💻 **Developer Friendly** - code highlighting with AI-powered explanations
+- 🤹 **Interactive** - embed Vue components enhanced by AI workflows
+- 🎥 **Smart Recording** - AI-assisted presentation recording and editing
+- 📤 **Multi-format Export** - AI-optimized exports for different platforms
+- 🛠 **Infinitely Hackable** - combine with AI tools for unlimited possibilities
+
+::right::
+
+<div class="ai-neural-bg h-full flex flex-col justify-center items-center rounded-lg p-8">
+  <div class="text-6xl mb-6">⚡</div>
+  <h3 class="text-white text-center mb-4">The AI Advantage</h3>
+  <div class="text-white/80 text-sm text-center space-y-2">
+    <div>🔍 Instant code analysis</div>
+    <div>✨ Smart content suggestions</div> 
+    <div>🎯 Automated formatting</div>
+    <div>🚀 Rapid prototyping</div>
+  </div>
+</div>
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -141,13 +189,18 @@ The title will be inferred from your slide content, or you can override it with 
 <Toc text-sm minDepth="1" maxDepth="2" />
 
 ---
-layout: image-right
-image: https://cover.sli.dev
+layout: two-cols
+class: ai-code-bg
 ---
 
-# Code
+# AI-Enhanced Code
 
-Use code snippets and get the highlighting directly, and even types hover!
+<div class="flex items-center mb-4">
+  <div class="text-3xl mr-3">💡</div>
+  <div>AI transforms how we write, review, and understand code</div>
+</div>
+
+Experience the power of AI-assisted development:
 
 ```ts [filename-example.ts] {all|4|6|6-7|9|all} twoslash
 // TwoSlash enables TypeScript hover information
