@@ -188,9 +188,17 @@ body, html {
   background-attachment: fixed;
 }
 
-/* Ensure cover slide uses the professional background */
+/* Ensure cover slide uses the background image without overrides */
 .slidev-layout.cover {
-  background-attachment: fixed;
+  background-size: 100% 100% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* Remove any conflicting background overrides for cover slide */
+.slidev-layout.cover::before {
+  display: none !important;
 }
 
 /* Professional text styling for dark background */
