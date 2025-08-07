@@ -175,29 +175,112 @@
   z-index: -2;
 }
 
-/* Override any random background generation */
+/* ==================== */
+/* BACKGROUND TRANSITION FIXES */
+/* ==================== */
+
+/* Preload and cache backgrounds to prevent transition lag */
 .slidev-layout {
-  background-attachment: fixed !important;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out !important;
+  background-attachment: local !important; /* Changed from fixed to prevent lag */
+  will-change: background-image; /* Optimize for background changes */
 }
 
-/* Professional background support */
+/* Professional background support with smooth transitions */
 body,
 html {
   background: var(--gradient-primary);
-  background-attachment: fixed;
+  background-attachment: local; /* Changed from fixed */
+  transition: background 0.3s ease-in-out;
 }
 
-/* Ensure cover slide uses the background image without overrides */
+/* Ensure cover slide background transitions smoothly */
 .slidev-layout.cover {
-  background-size: 100% 100% !important;
+  background-size: cover !important; /* Changed from 100% 100% for better scaling */
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
+  background-attachment: local !important; /* Changed from fixed */
+  transition: all 0.3s ease-in-out !important;
 }
 
-/* Remove any conflicting background overrides for cover slide */
+/* Create overlay to ensure smooth transitions */
 .slidev-layout.cover::before {
-  display: none !important;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0.1; /* Subtle overlay */
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Background image preloading optimization */
+.slidev-layout[style*="background-image"] {
+  background-blend-mode: overlay;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Ensure consistent background during transitions */
+.slidev-layout-transition-enter-active,
+.slidev-layout-transition-leave-active {
+  transition: all 0.3s ease-in-out !important;
+}
+
+.slidev-layout-transition-enter-from,
+.slidev-layout-transition-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+/* Force hardware acceleration for smoother transitions */
+.slidev-layout,
+.slidev-layout::before,
+.slidev-layout::after {
+  transform: translateZ(0); /* Force GPU acceleration */
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Preload critical background images to prevent lag */
+body::after {
+  content: "";
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  background-image: 
+    url('/intro-back.png'),
+    url('/title-background.png'),
+    url('/ai-professional-bg.svg'),
+    url('/ai-tech-bg.svg');
+  background-repeat: no-repeat;
+  background-size: 1px 1px;
+}
+
+/* Smooth fade transition between slides */
+.slidev-page-transition-enter-active,
+.slidev-page-transition-leave-active {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.slidev-page-transition-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.slidev-page-transition-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Prevent background flicker during transitions */
+.slidev-page {
+  background: var(--gradient-primary);
+  transition: background 0.4s ease-in-out;
 }
 
 /* Professional text styling for dark background */
@@ -308,3 +391,161 @@ code {
   background: rgba(14, 165, 233, 0.2) !important;
   border-color: rgba(14, 165, 233, 0.5);
 }
+
+/* ==================== */
+/* CONSISTENT LAYOUT SYSTEM */
+/* ==================== */
+
+/* Standard layout structure for all slides */
+.standard-layout {
+  padding: 2rem;
+  position: relative;
+}
+
+/* Slide header - consistent title and subtitle area */
+.slide-header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(14, 165, 233, 0.3);
+  padding-bottom: 1rem;
+}
+
+.slide-header h1 {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+  color: var(--ai-text) !important;
+}
+
+.slide-header .subtitle {
+  font-size: 1.1rem;
+  color: var(--ai-text-light);
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Content sections */
+.content-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-block {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.section-block h2 {
+  color: var(--ai-accent) !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  border-bottom: 1px solid rgba(14, 165, 233, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+/* Sidebar highlighting for two-column layouts */
+.sidebar-highlight {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Info callouts */
+.info-callout {
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.info-callout a {
+  color: var(--ai-accent) !important;
+  text-decoration: underline;
+}
+
+/* Keyboard shortcuts styling */
+.shortcuts-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.shortcut-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shortcut-keys {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.shortcut-keys kbd {
+  background: var(--ai-primary) !important;
+  color: white !important;
+  border: 1px solid var(--ai-accent) !important;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.shortcut-desc {
+  color: var(--ai-text-light);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* Content slide specific styling */
+.content-slide {
+  background: var(--gradient-primary);
+}
+
+/* Two-column layout enhancements */
+.standard-layout.layout-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .shortcuts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .shortcut-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .shortcut-desc {
+    text-align: center;
+  }
+}
+
+/* Layout type indicators (comments for organization) */
+/* 
+Layout Types Defined:
+1. standard-layout - Base layout with consistent padding and structure
+2. content-slide - Standard content presentation
+3. two-cols standard-layout - Two-column layout with sidebar
+4. section-block - Grouped content sections
+5. slide-header - Consistent header with title and subtitle
+6. sidebar-highlight - Right column highlight area
+*/

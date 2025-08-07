@@ -10,7 +10,27 @@ info: |
 class: text-center slide-ai-intro
 drawings:
   persist: false
-transition: slide-left
+# Enhanced slide transitions and animations with background fix
+transition: fade
+transitionDuration: 400
+animations:
+  enter: fade
+  leave: fade
+  duration: 400
+  easing: cubic-bezier(0.4, 0, 0.2, 1)
+# Background transition optimization
+backgroundTransition: true
+preloadImages: true
+# Click animation preferences
+clickAnimations:
+  enabled: true
+  duration: 400
+  easing: cubic-bezier(0.4, 0, 0.2, 1)
+# Motion animation defaults
+motionDefaults:
+  duration: 600
+  easing: cubic-bezier(0.34, 1.56, 0.64, 1)
+  staggerDelay: 100
 mdc: true
 colorSchema: auto
 themeConfig:
@@ -81,39 +101,46 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
+# Standard Two-Column Layout - Content with Sidebar
 transition: fade-out
 layout: two-cols
-class: ai-circuit-bg
+class: ai-circuit-bg standard-layout
 ---
 
 # AI-Powered Presentations
 
-<div class="flex items-center mb-6">
-  <div class="text-4xl mr-3">🧠</div>
-  <div>Just like our AI friend, modern presentation tools are getting smarter</div>
+<div class="slide-header">
+  <div class="flex items-center mb-6">
+    <div class="text-4xl mr-3">🧠</div>
+    <div class="subtitle">Just like our AI friend, modern presentation tools are getting smarter</div>
+  </div>
 </div>
 
-Slidev represents the evolution of developer presentations:
+<div class="content-section">
+  Slidev represents the evolution of developer presentations:
 
-- 🤖 **AI-Assisted** - leverage AI for content creation and code examples  
-- 📝 **Text-based** - focus on content with Markdown, style with AI suggestions
-- 🎨 **Intelligent Theming** - AI-optimized themes and color schemes
-- 🧑‍💻 **Developer Friendly** - code highlighting with AI-powered explanations
-- 🤹 **Interactive** - embed Vue components enhanced by AI workflows
-- 🎥 **Smart Recording** - AI-assisted presentation recording and editing
-- 📤 **Multi-format Export** - AI-optimized exports for different platforms
-- 🛠 **Infinitely Hackable** - combine with AI tools for unlimited possibilities
+  - 🤖 **AI-Assisted** - leverage AI for content creation and code examples  
+  - 📝 **Text-based** - focus on content with Markdown, style with AI suggestions
+  - 🎨 **Intelligent Theming** - AI-optimized themes and color schemes
+  - 🧑‍💻 **Developer Friendly** - code highlighting with AI-powered explanations
+  - 🤹 **Interactive** - embed Vue components enhanced by AI workflows
+  - 🎥 **Smart Recording** - AI-assisted presentation recording and editing
+  - 📤 **Multi-format Export** - AI-optimized exports for different platforms
+  - 🛠 **Infinitely Hackable** - combine with AI tools for unlimited possibilities
+</div>
 
 ::right::
 
-<div class="ai-neural-bg h-full flex flex-col justify-center items-center rounded-lg p-8">
-  <div class="text-6xl mb-6">⚡</div>
-  <h3 class="text-white text-center mb-4">The AI Advantage</h3>
-  <div class="text-white/80 text-sm text-center space-y-2">
-    <div>🔍 Instant code analysis</div>
-    <div>✨ Smart content suggestions</div> 
-    <div>🎯 Automated formatting</div>
-    <div>🚀 Rapid prototyping</div>
+<div class="sidebar-highlight">
+  <div class="ai-neural-bg h-full flex flex-col justify-center items-center rounded-lg p-8">
+    <div class="text-6xl mb-6">⚡</div>
+    <h3 class="text-white text-center mb-4">The AI Advantage</h3>
+    <div class="text-white/80 text-sm text-center space-y-2">
+      <div>🔍 Instant code analysis</div>
+      <div>✨ Smart content suggestions</div> 
+      <div>🎯 Automated formatting</div>
+      <div>🚀 Rapid prototyping</div>
+    </div>
   </div>
 </div>
 
@@ -139,22 +166,57 @@ Here is another comment.
 -->
 
 ---
+# Standard Content Layout - Information Display
 transition: slide-up
 level: 2
+layout: default
+class: standard-layout content-slide
 ---
 
-# Navigation
+<div class="slide-header">
+  <h1>Navigation</h1>
+  <div class="subtitle">Master the presentation controls</div>
+</div>
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+<div class="content-section">
+  <div class="info-callout mb-6">
+    <div class="flex items-center">
+      <carbon:information class="text-2xl mr-3 text-blue-400" />
+      <span>Hover on the bottom-left corner to see the navigation's controls panel, <a href="https://sli.dev/guide/ui#navigation-bar" target="_blank">learn more</a></span>
+    </div>
+  </div>
 
-## Keyboard Shortcuts
-
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
+  <div class="section-block">
+    <h2>Keyboard Shortcuts</h2>
+    
+    <div class="shortcuts-grid">
+      <div class="shortcut-item">
+        <div class="shortcut-keys">
+          <kbd>→</kbd> / <kbd>space</kbd>
+        </div>
+        <div class="shortcut-desc">next animation or slide</div>
+      </div>
+      <div class="shortcut-item">
+        <div class="shortcut-keys">
+          <kbd>←</kbd> / <kbd>shift</kbd><kbd>space</kbd>
+        </div>
+        <div class="shortcut-desc">previous animation or slide</div>
+      </div>
+      <div class="shortcut-item">
+        <div class="shortcut-keys">
+          <kbd>↑</kbd>
+        </div>
+        <div class="shortcut-desc">previous slide</div>
+      </div>
+      <div class="shortcut-item">
+        <div class="shortcut-keys">
+          <kbd>↓</kbd>
+        </div>
+        <div class="shortcut-desc">next slide</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- https://sli.dev/guide/animations.html#click-animation -->
 <img
