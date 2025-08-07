@@ -1,6 +1,5 @@
 ---
 theme: seriph
-background: /title-background.png
 title: AI is Here
 info: |
   ## AI is Here
@@ -22,7 +21,9 @@ themeConfig:
 css: unocss
 highlighter: shiki
 lineNumbers: true
-layout: cover
+layout: image-left
+image: /intro-back.png
+background: /intro-back.png
 fonts:
   sans: 'Inter, ui-sans-serif, system-ui'
   serif: 'ui-serif, Georgia'
@@ -32,15 +33,15 @@ seoMeta:
 ---
 
 # AI is Here
-
+<template>
+  <footer class="absolute bottom-0 left-0 right-0 p-2">Your Name</footer>
+</template>
 <div class="flex items-center justify-center mb-8">
   <div class="mr-4">
     <carbon:code class="text-6xl text-blue-400" />
   </div>
-  <div class="text-lg text-gray-300">Introducing AI tools and workflows for</div>
+  <div class="text-lg text-gray-300">Now What?</div>
 </div>
-
-## Product Engineering Teams
 
 <div class="flex justify-center mt-8 space-x-3">
   <div v-motion :initial="{ opacity: 0, y: 50 }" :enter="{ opacity: 1, y: 0, transition: { delay: 500 } }" class="feature-card px-3 py-3 rounded-lg">
@@ -67,11 +68,6 @@ seoMeta:
     <carbon:education class="text-2xl mb-2 tech-icon" />
     <div class="text-sm font-medium">Learning</div>
   </div>
-</div>
-
-<div v-motion :initial="{ opacity: 0, y: 20 }" :enter="{ opacity: 1, y: 0, transition: { delay: 1700 } }" @click="$slidev.nav.next" class="nav-button mt-12 py-3 px-6 rounded-lg cursor-pointer">
-  <carbon:arrow-right class="inline mr-2" />
-  Press Space or click to continue
 </div>
 
 <div class="abs-br m-6 text-xl opacity-60">

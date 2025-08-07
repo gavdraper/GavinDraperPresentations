@@ -302,3 +302,21 @@ code {
   background: rgba(14, 165, 233, 0.2) !important;
   border-color: rgba(14, 165, 233, 0.5);
 }
+
+/* Global footer for all slides */
+.slidev-layout::after {
+  content: "Gavin Draper - AI is Here";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 16px;
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(14, 165, 233, 0.3);
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  z-index: 1000;
+  pointer-events: none;
+}
