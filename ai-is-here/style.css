@@ -107,6 +107,15 @@
     linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
 }
 
+.ai-professional-bg {
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.1) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.1) 0%, transparent 60%),
+    radial-gradient(circle at 40% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 60%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
+  position: relative;
+}
+
 .ai-neural-bg {
   background: var(--gradient-neural);
   background-attachment: fixed;
@@ -539,6 +548,68 @@ code {
   }
 }
 
+/* Experience blocks for About Me slide */
+.experience-block {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.experience-block:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--ai-accent);
+  transform: translateX(5px);
+}
+
+/* Professional milestones styling */
+.milestone-number {
+  background: var(--gradient-accent);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+/* About Me slide specific neural background */
+.ai-professional-bg .ai-neural-bg {
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.2) 0%, 
+    rgba(168, 85, 247, 0.2) 50%, 
+    rgba(14, 165, 233, 0.2) 100%);
+  position: relative;
+}
+
+.ai-professional-bg .ai-neural-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(2px 2px at 40px 70px, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+    radial-gradient(1px 1px at 90px 40px, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
+  background-size: 100px 100px;
+  animation: neural-flow 20s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes neural-flow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100px); }
+}
+
 /* Layout type indicators (comments for organization) */
 /* 
 Layout Types Defined:
@@ -548,4 +619,6 @@ Layout Types Defined:
 4. section-block - Grouped content sections
 5. slide-header - Consistent header with title and subtitle
 6. sidebar-highlight - Right column highlight area
+7. ai-professional-bg - About Me slide with professional experience theme
+8. experience-block - Individual experience highlight blocks
 */

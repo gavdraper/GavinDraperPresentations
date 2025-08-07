@@ -101,6 +101,76 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
+# About Me
+layout: two-cols
+transition: fade-out
+class: ai-professional-bg standard-layout
+---
+
+<div class="mb-6">
+  <h1 class="text-2xl font-bold text-white mb-2">👨‍💻 About Me</h1>
+  <div class="text-sm text-gray-300">From code to leadership, with AI as my copilot</div>
+</div>
+
+<div class="space-y-2">
+  <div v-click class="flex items-center py-2 px-3 rounded bg-slate-800/30 border-l-4 border-blue-400">
+    <div class="text-lg mr-3">🚀</div>
+    <div class="text-base font-semibold text-blue-400">24 Years in Software Development</div>
+  </div>
+
+  <div v-click class="flex items-center py-2 px-3 rounded bg-slate-800/30 border-l-4 border-green-400">
+    <div class="text-lg mr-3">⚙️</div>
+    <div class="text-base font-semibold text-green-400">18 Years Backend & Data Engineering</div>
+  </div>
+
+  <div v-click class="flex items-center py-2 px-3 rounded bg-slate-800/30 border-l-4 border-purple-400">
+    <div class="text-lg mr-3">🎯</div>
+    <div class="text-base font-semibold text-purple-400">6 Years Engineering Management</div>
+  </div>
+
+  <div v-click class="flex items-center py-2 px-3 rounded bg-blue-900/30 border-l-4 border-yellow-400">
+    <div class="text-lg mr-3">🤖</div>
+    <div class="text-base font-semibold text-yellow-400">AI Integration Focus</div>
+  </div>
+</div>
+
+::right::
+
+<div class="h-full flex flex-col justify-center space-y-4">
+  
+  <div v-click class="ai-neural-bg rounded-lg p-4 text-center">
+    <div class="text-4xl mb-2">🤖</div>
+    <h3 class="text-white text-lg font-bold mb-3">The AI Journey</h3>
+    <div class="space-y-2 text-sm">
+      <div class="flex items-center justify-center text-orange-300">
+        <div class="mr-2">📈</div>
+        <span>Clueless → Excited & Still Clueless</span>
+      </div>
+      <div class="flex items-center justify-center text-green-300">
+        <div class="mr-2">⚡</div>
+        <span>10x the dopamine hits</span>
+      </div>
+      <div class="flex items-center justify-center text-blue-300">
+        <div class="mr-2">🎯</div>
+        <span>Something funny</span>
+      </div>
+    </div>
+  </div>
+
+  <div v-click class="bg-slate-800/40 rounded-lg p-4 border border-slate-600">
+    <h4 class="text-white font-semibold mb-2 text-center">Current Tools</h4>
+    <div class="grid grid-cols-2 gap-2 text-xs">
+      <div class="bg-blue-900/30 rounded px-2 py-1 text-center text-blue-300">Claude</div>
+      <div class="bg-green-900/30 rounded px-2 py-1 text-center text-green-300">ChatGPT</div>
+      <div class="bg-purple-900/30 rounded px-2 py-1 text-center text-purple-300">Copilot</div>
+      <div class="bg-orange-900/30 rounded px-2 py-1 text-center text-orange-300">Cursor</div>
+    </div>
+  </div>
+
+
+</div>
+
+---
 # Standard Two-Column Layout - Content with Sidebar
 transition: fade-out
 layout: two-cols
