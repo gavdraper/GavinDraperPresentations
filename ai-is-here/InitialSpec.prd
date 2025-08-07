@@ -1,0 +1,47 @@
+This project is a slide presentation writing in Slidev. The documentation for Slidev can be read at https://sli.dev/guide/why
+
+The presentation aims to walk through through how they can introduce value into their daily tasks with AI covering various roles of a Product Engineering Team (Software Engineer, Engineering Leadership, Product, UX and similar)
+
+The design should be modern, easy to read, use images where it adds to the slide. Use transitions on elements and slide transistions.s
+
+The key areas to cover....
+
+* Opening slide with title, catchy sub title
+
+* Who am I, A bit about me/background
+    * 24 years in software
+    * 18 years hands on Backend/Data Engineer
+    * 6 Years mostly hands off in Engineering Management
+
+* Introducing out new AI friend
+    * Desperate to please
+    * Over confident
+    * Over Enthusiastic
+    * Straight out of school
+
+* Examples
+    * Code Reviews
+
+    * Testing
+
+    * Areas with skills you don't have
+        * Focus on your value add
+
+    * Jira Ticket Writing
+    
+    * Hands on for Hands off people
+        * Octopus exports
+        * Card Game
+
+    * Debugging
+        * Describe Symptoms - Let AI find places to start your investigation
+        
+    * Learning - Grafana
+
+    * Building Presentions - Tongue in cheek references to this one
+
+* Closing points
+    * Try different models, where GPT once blew our minds writing code, it has for the moment been left behind in the coding space by models like Sonnet, Gemini and Opus.
+    * Trial not touching google and starting with your AI tools, For every task you start ask if AI can give a head start
+    * Refine your AI Instruction files (Claud.md, copilit-instructions.md etc as you want to change behaviors)
+    * Review everything that comes out of any AI tools
