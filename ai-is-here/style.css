@@ -13,7 +13,7 @@
   --ai-text-light: #e2e8f0;
   --ai-bg: #0f172a;
   --ai-bg-secondary: #1e293b;
-  
+
   /* Professional gradients */
   --gradient-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   --gradient-secondary: linear-gradient(135deg, #1e293b 0%, #334155 100%);
@@ -101,7 +101,7 @@
 
 /* AI-themed background patterns */
 .ai-circuit-bg {
-  background-image: 
+  background-image:
     radial-gradient(circle at 25% 25%, rgba(102, 126, 234, 0.1) 0%, transparent 70%),
     radial-gradient(circle at 75% 75%, rgba(118, 75, 162, 0.1) 0%, transparent 70%),
     linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
@@ -124,14 +124,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    repeating-linear-gradient(
-      45deg,
+  background-image:
+    repeating-linear-gradient(45deg,
       transparent,
       transparent 2px,
       rgba(255, 255, 255, 0.05) 2px,
-      rgba(255, 255, 255, 0.05) 4px
-    );
+      rgba(255, 255, 255, 0.05) 4px);
   pointer-events: none;
 }
 
@@ -183,7 +181,8 @@
 }
 
 /* Professional background support */
-body, html {
+body,
+html {
   background: var(--gradient-primary);
   background-attachment: fixed;
 }
@@ -235,8 +234,15 @@ code {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
 }
 
 /* Code syntax highlighting enhancements */
@@ -301,22 +307,4 @@ code {
 .nav-button:hover {
   background: rgba(14, 165, 233, 0.2) !important;
   border-color: rgba(14, 165, 233, 0.5);
-}
-
-/* Global footer for all slides */
-.slidev-layout::after {
-  content: "Gavin Draper - AI is Here";
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 8px 16px;
-  background: rgba(30, 41, 59, 0.8);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(14, 165, 233, 0.3);
-  color: white;
-  text-align: center;
-  font-size: 12px;
-  z-index: 1000;
-  pointer-events: none;
 }

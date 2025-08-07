@@ -4,7 +4,7 @@ title: AI is Here
 info: |
   ## AI is Here
   Introducing AI tools and workflows for Product Engineering Teams.
-  
+
   A presentation about practical AI integration in software development,
   covering characteristics, limitations, and real-world applications.
 class: text-center slide-ai-intro
@@ -14,10 +14,10 @@ transition: slide-left
 mdc: true
 colorSchema: auto
 themeConfig:
-  primary: '#0ea5e9'
-  secondary: '#1e293b'
-  accent: '#22c55e'
-  neutral: '#64748b'
+  primary: "#0ea5e9"
+  secondary: "#1e293b"
+  accent: "#22c55e"
+  neutral: "#64748b"
 css: unocss
 highlighter: shiki
 lineNumbers: true
@@ -25,9 +25,9 @@ layout: image-left
 image: /intro-back.png
 background: /intro-back.png
 fonts:
-  sans: 'Inter, ui-sans-serif, system-ui'
-  serif: 'ui-serif, Georgia'
-  mono: 'Fira Code, ui-monospace, SFMono-Regular'
+  sans: "Inter, ui-sans-serif, system-ui"
+  serif: "ui-serif, Georgia"
+  mono: "Fira Code, ui-monospace, SFMono-Regular"
 seoMeta:
   ogImage: auto
 ---
@@ -43,7 +43,7 @@ seoMeta:
   <div class="text-lg text-gray-300">Now What?</div>
 </div>
 
-<div class="flex justify-center mt-8 space-x-3">
+<!-- <div class="flex justify-center mt-8 space-x-3">
   <div v-motion :initial="{ opacity: 0, y: 50 }" :enter="{ opacity: 1, y: 0, transition: { delay: 500 } }" class="feature-card px-3 py-3 rounded-lg">
     <carbon:code class="text-2xl mb-2 tech-icon" />
     <div class="text-sm font-medium">Code Review</div>
@@ -68,7 +68,7 @@ seoMeta:
     <carbon:education class="text-2xl mb-2 tech-icon" />
     <div class="text-sm font-medium">Learning</div>
   </div>
-</div>
+</div> -->
 
 <div class="abs-br m-6 text-xl opacity-60">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
