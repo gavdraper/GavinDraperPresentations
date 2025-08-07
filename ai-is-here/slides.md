@@ -13,6 +13,21 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
+colorSchema: auto
+themeConfig:
+  primary: '#3b82f6'
+  secondary: '#1e40af'
+  accent: '#f59e0b'
+  neutral: '#374151'
+css: unocss
+highlighter: shiki
+lineNumbers: true
+layout: cover
+transition: fade-out
+fonts:
+  sans: 'Inter, ui-sans-serif, system-ui'
+  serif: 'ui-serif, Georgia'
+  mono: 'Fira Code, ui-monospace, SFMono-Regular'
 seoMeta:
   ogImage: auto
 ---
@@ -628,3 +643,5 @@ class: text-center
 [Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
 
 <PoweredBySlidev mt-10 />
+
+<style src="./style.css"></style>
