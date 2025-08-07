@@ -1,18 +1,24 @@
 /* Custom styling for AI is Here presentation */
 
 :root {
-  /* Color palette for AI theme */
-  --ai-primary: #3b82f6;
-  --ai-secondary: #1e40af;
-  --ai-accent: #f59e0b;
-  --ai-neutral: #374151;
-  --ai-success: #10b981;
+  /* Professional AI-inspired color palette */
+  --ai-primary: #1e293b;
+  --ai-secondary: #334155;
+  --ai-accent: #0ea5e9;
+  --ai-neutral: #64748b;
+  --ai-success: #22c55e;
   --ai-warning: #f59e0b;
   --ai-error: #ef4444;
-  --ai-text: #1f2937;
-  --ai-text-light: #6b7280;
-  --ai-bg: #ffffff;
-  --ai-bg-secondary: #f9fafb;
+  --ai-text: #ffffff;
+  --ai-text-light: #e2e8f0;
+  --ai-bg: #0f172a;
+  --ai-bg-secondary: #1e293b;
+  
+  /* Professional gradients */
+  --gradient-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  --gradient-secondary: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  --gradient-dark: linear-gradient(135deg, #020617 0%, #0f172a 100%);
 }
 
 .dark {
@@ -24,12 +30,13 @@
 
 /* Enhanced typography */
 .slidev-layout h1 {
-  color: var(--ai-primary);
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--ai-primary), var(--ai-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--ai-text) !important;
+  font-weight: 700 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: var(--ai-text) !important;
+  background-clip: unset !important;
 }
 
 .slidev-layout h2 {
@@ -89,5 +96,209 @@
 
 /* Progress indicators */
 .slide-progress {
-  background: linear-gradient(to right, var(--ai-primary), var(--ai-accent));
+  background: var(--gradient-primary);
+}
+
+/* AI-themed background patterns */
+.ai-circuit-bg {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(102, 126, 234, 0.1) 0%, transparent 70%),
+    radial-gradient(circle at 75% 75%, rgba(118, 75, 162, 0.1) 0%, transparent 70%),
+    linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+}
+
+.ai-neural-bg {
+  background: var(--gradient-neural);
+  background-attachment: fixed;
+}
+
+.ai-code-bg {
+  background: var(--gradient-code);
+  position: relative;
+}
+
+.ai-code-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.05) 2px,
+      rgba(255, 255, 255, 0.05) 4px
+    );
+  pointer-events: none;
+}
+
+/* AI-themed slide layouts */
+.slide-ai-intro {
+  background: var(--gradient-primary);
+  color: white;
+  position: relative;
+}
+
+.slide-ai-intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  z-index: -1;
+}
+
+.slide-ai-intro .slidev-layout h1 {
+  color: white !important;
+  background: none !important;
+  -webkit-text-fill-color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure cover slide has proper AI background */
+.slidev-layout.cover {
+  background: var(--gradient-primary) !important;
+  color: white;
+}
+
+.slidev-layout.cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  z-index: -2;
+}
+
+/* Override any random background generation */
+.slidev-layout {
+  background-attachment: fixed !important;
+}
+
+/* Professional background support */
+body, html {
+  background: var(--gradient-primary);
+  background-attachment: fixed;
+}
+
+/* Ensure cover slide uses the background image without overrides */
+.slidev-layout.cover {
+  background-size: 100% 100% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* Remove any conflicting background overrides for cover slide */
+.slidev-layout.cover::before {
+  display: none !important;
+}
+
+/* Professional text styling for dark background */
+.slidev-layout h2,
+.slidev-layout h3 {
+  color: var(--ai-text-light) !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  color: var(--ai-text-light) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Professional code blocks */
+.slidev-code,
+pre,
+code {
+  background: rgba(15, 23, 42, 0.8) !important;
+  color: #e2e8f0 !important;
+  border: 1px solid rgba(14, 165, 233, 0.3) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Neural network visualization effects */
+.neural-node {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gradient-neural);
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Code syntax highlighting enhancements */
+.slidev-code {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* AI personality indicators */
+.ai-personality-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.ai-personality-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.2);
+}
+
+/* Tech icon styling */
+.tech-icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(14, 165, 233, 0.6));
+}
+
+/* Professional feature cards for title slide */
+.feature-card {
+  background: rgba(30, 41, 59, 0.6) !important;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card:hover {
+  background: rgba(30, 41, 59, 0.8) !important;
+  border-color: rgba(14, 165, 233, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.2);
+}
+
+/* Navigation button styling */
+.nav-button {
+  background: rgba(30, 41, 59, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: rgba(14, 165, 233, 0.2) !important;
+  border-color: rgba(14, 165, 233, 0.5);
 }
