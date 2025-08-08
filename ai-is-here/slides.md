@@ -171,6 +171,66 @@ class: ai-professional-bg standard-layout
 </div>
 
 ---
+# Meet Our New AI Friend
+layout: center
+transition: fade-out
+class: standard-layout
+---
+
+<div class="text-center mb-4">
+  <div class="text-6xl mb-3">🤖</div>
+  <h1 class="text-3xl font-bold text-white mb-2">Meet Our New AI Friend!</h1>
+  <div class="text-lg text-gray-300">Understanding AI personality traits</div>
+</div>
+
+<div class="grid grid-cols-2 gap-4 max-w-5xl mx-auto">
+  <div v-click="1" class="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 rounded-lg p-4 border border-yellow-500/20">
+    <div class="flex items-center mb-2">
+      <div class="text-3xl mr-3">🙏</div>
+      <h3 class="text-lg font-bold text-yellow-400">Desperate to Please</h3>
+    </div>
+    <p class="text-gray-300 text-sm">Will bend over backwards to help, even when it shouldn't. Like that coworker who says "yes" to everything.</p>
+  </div>
+
+  <div v-click="2" class="bg-gradient-to-br from-red-900/30 to-pink-900/30 rounded-lg p-4 border border-red-500/20">
+    <div class="flex items-center mb-2">
+      <div class="text-3xl mr-3">💪</div>
+      <h3 class="text-lg font-bold text-red-400">Over Confident</h3>
+    </div>
+    <p class="text-gray-300 text-sm">Absolutely convinced it knows the answer, even when it's completely wrong. "I'm 100% sure this regex will work!"</p>
+  </div>
+
+  <div v-click="3" class="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-lg p-4 border border-green-500/20">
+    <div class="flex items-center mb-2">
+      <div class="text-3xl mr-3">🎉</div>
+      <h3 class="text-lg font-bold text-green-400">Over Enthusiastic</h3>
+    </div>
+    <p class="text-gray-300 text-sm">Every task is THE MOST EXCITING THING EVER! "Let me help you refactor your entire codebase!"</p>
+  </div>
+
+  <div v-click="4" class="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-lg p-4 border border-blue-500/20">
+    <div class="flex items-center mb-2">
+      <div class="text-3xl mr-3">🎓</div>
+      <h3 class="text-lg font-bold text-blue-400">Straight Out of School</h3>
+    </div>
+    <p class="text-gray-300 text-sm">Knows all the theory, has read every documentation, but still asks "What's production like?" every five minutes.</p>
+  </div>
+</div>
+
+<div v-click="5" class="mt-4 text-center">
+  <div class="bg-slate-800/40 rounded-lg p-3 border border-slate-600 inline-block">
+    <p class="text-gray-300">
+      <span class="text-yellow-400">Sound familiar?</span> 
+      It's like having a brilliant intern who never sleeps... or stops talking.
+    </p>
+  </div>
+</div>
+
+<!--
+This slide introduces the AI personality in a humorous and relatable way, setting up the audience to understand AI limitations while keeping the tone light and engaging.
+-->
+
+---
 # Standard Two-Column Layout - Content with Sidebar
 transition: fade-out
 layout: two-cols
