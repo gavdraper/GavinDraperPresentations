@@ -101,14 +101,15 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
-# About Me
 layout: two-cols
 transition: fade-out
 class: ai-professional-bg standard-layout
 ---
 
+# About Me
+
 <div class="mb-6">
-  <h1 class="text-2xl font-bold text-white mb-2">👨‍💻 About Me</h1>
+  <div class="text-3xl mb-2">👨‍💻</div>
   <div class="text-sm text-gray-300">From code to leadership, with AI as my copilot</div>
 </div>
 
@@ -171,55 +172,55 @@ class: ai-professional-bg standard-layout
 </div>
 
 ---
-# Meet Our New AI Friend
 layout: center
 transition: fade-out
 class: standard-layout
 ---
 
-<div class="text-center mb-4">
-  <div class="text-6xl mb-3">🤖</div>
-  <h1 class="text-3xl font-bold text-white mb-2">Meet Our New AI Friend!</h1>
-  <div class="text-lg text-gray-300">Understanding AI personality traits</div>
+# Meet Our New AI Friend
+
+<div class="text-center mb-2 mt-2">
+  <div class="text-3xl mb-2">🤖</div>
+  <div class="text-base text-gray-300">Understanding AI personality traits</div>
 </div>
 
-<div class="grid grid-cols-2 gap-4 max-w-5xl mx-auto">
-  <div v-click="1" class="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 rounded-lg p-4 border border-yellow-500/20">
-    <div class="flex items-center mb-2">
-      <div class="text-3xl mr-3">🙏</div>
-      <h3 class="text-lg font-bold text-yellow-400">Desperate to Please</h3>
+<div class="grid grid-cols-2 gap-2 max-w-4xl mx-auto">
+  <div v-click="1" class="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 rounded-lg p-2 border border-yellow-500/20">
+    <div class="flex items-center mb-1">
+      <div class="text-xl mr-2">🙏</div>
+      <h3 class="text-sm font-bold text-yellow-400">Desperate to Please</h3>
     </div>
-    <p class="text-gray-300 text-sm">Will bend over backwards to help, even when it shouldn't. Like that coworker who says "yes" to everything.</p>
+    <p class="text-gray-300 text-xs leading-tight">Will bend over backwards to help, even when it shouldn't. Like that coworker who says "yes" to everything.</p>
   </div>
 
-  <div v-click="2" class="bg-gradient-to-br from-red-900/30 to-pink-900/30 rounded-lg p-4 border border-red-500/20">
-    <div class="flex items-center mb-2">
-      <div class="text-3xl mr-3">💪</div>
-      <h3 class="text-lg font-bold text-red-400">Over Confident</h3>
+  <div v-click="2" class="bg-gradient-to-br from-red-900/30 to-pink-900/30 rounded-lg p-2 border border-red-500/20">
+    <div class="flex items-center mb-1">
+      <div class="text-xl mr-2">💪</div>
+      <h3 class="text-sm font-bold text-red-400">Over Confident</h3>
     </div>
-    <p class="text-gray-300 text-sm">Absolutely convinced it knows the answer, even when it's completely wrong. "I'm 100% sure this regex will work!"</p>
+    <p class="text-gray-300 text-xs leading-tight">Absolutely convinced it knows the answer, even when it's completely wrong. "I'm 100% sure this regex will work!"</p>
   </div>
 
-  <div v-click="3" class="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-lg p-4 border border-green-500/20">
-    <div class="flex items-center mb-2">
-      <div class="text-3xl mr-3">🎉</div>
-      <h3 class="text-lg font-bold text-green-400">Over Enthusiastic</h3>
+  <div v-click="3" class="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-lg p-2 border border-green-500/20">
+    <div class="flex items-center mb-1">
+      <div class="text-xl mr-2">🎉</div>
+      <h3 class="text-sm font-bold text-green-400">Over Enthusiastic</h3>
     </div>
-    <p class="text-gray-300 text-sm">Every task is THE MOST EXCITING THING EVER! "Let me help you refactor your entire codebase!"</p>
+    <p class="text-gray-300 text-xs leading-tight">Every task is THE MOST EXCITING THING EVER! "Let me help you refactor your entire codebase!"</p>
   </div>
 
-  <div v-click="4" class="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-lg p-4 border border-blue-500/20">
-    <div class="flex items-center mb-2">
-      <div class="text-3xl mr-3">🎓</div>
-      <h3 class="text-lg font-bold text-blue-400">Straight Out of School</h3>
+  <div v-click="4" class="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-lg p-2 border border-blue-500/20">
+    <div class="flex items-center mb-1">
+      <div class="text-xl mr-2">🎓</div>
+      <h3 class="text-sm font-bold text-blue-400">Straight Out of School</h3>
     </div>
-    <p class="text-gray-300 text-sm">Knows all the theory, has read every documentation, but still asks "What's production like?" every five minutes.</p>
+    <p class="text-gray-300 text-xs leading-tight">Knows all the theory, has read every documentation, but still asks "What's production like?" every five minutes.</p>
   </div>
 </div>
 
-<div v-click="5" class="mt-4 text-center">
-  <div class="bg-slate-800/40 rounded-lg p-3 border border-slate-600 inline-block">
-    <p class="text-gray-300">
+<div v-click="5" class="mt-2 mb-16 text-center">
+  <div class="bg-slate-800/40 rounded-lg p-2 border border-slate-600 inline-block">
+    <p class="text-gray-300 text-sm">
       <span class="text-yellow-400">Sound familiar?</span> 
       It's like having a brilliant intern who never sleeps... or stops talking.
     </p>
@@ -231,7 +232,416 @@ This slide introduces the AI personality in a humorous and relatable way, settin
 -->
 
 ---
-# Standard Two-Column Layout - Content with Sidebar
+transition: fade-out
+layout: center
+class: ai-circuit-bg standard-layout
+---
+
+# Ticket Refinement
+
+<div class="text-center space-y-8">
+  <div class="slide-header">
+    <div class="flex items-center justify-center mb-6">
+      <div class="text-4xl mr-3">🎫</div>
+    </div>
+    <div class="subtitle text-gray-300">It doesn't take much for an AI to be better than an engineer at this 😉</div>
+  </div>
+
+  <div v-click class="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-lg p-6 border border-slate-600 max-w-3xl mx-auto">
+    <div class="text-lg text-yellow-400 mb-4 font-semibold">Let's be honest...</div>
+    <div class="text-gray-300 text-base">
+      How many tickets have you seen that just say "Fix the thing" or "Make it work better"? <br/>
+      <span class="text-blue-400 font-medium">AI can turn those masterpieces into actual requirements!</span>
+    </div>
+  </div>
+
+  <div v-click class="text-center">
+    <div class="text-sm text-gray-400">
+      Time to level up from "it's broken" to "here's exactly what needs to happen"
+    </div>
+  </div>
+</div>
+
+---
+transition: fade-out
+layout: two-cols
+class: ai-circuit-bg standard-layout
+---
+
+# Improving Ticket Descriptions
+
+<div class="slide-header mb-6">
+  <div class="flex items-center mb-4">
+    <div class="text-3xl mr-3">📝</div>
+  </div>
+  <div class="subtitle text-gray-300">Transform unclear requirements into actionable stories</div>
+</div>
+
+## Before: The Classic Engineer Special
+
+<div v-click class="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-4">
+  <div class="text-red-400 font-mono text-sm mb-2">TICKET-001</div>
+  <div class="text-white font-semibold mb-2">Fix login bug</div>
+  <div class="text-gray-400 text-sm">
+    Description: "Users can't login sometimes. It's broken."
+  </div>
+</div>
+
+## After: AI-Enhanced Clarity
+
+<div v-click class="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
+  <div class="text-green-400 font-mono text-sm mb-2">TICKET-001</div>
+  <div class="text-white font-semibold mb-2">Resolve intermittent authentication failures</div>
+  <div class="text-gray-300 text-sm space-y-2">
+    <p><strong>Issue:</strong> Users experience login failures approximately 15% of the time</p>
+    <p><strong>Impact:</strong> Affects user acquisition and retention metrics</p>
+    <p><strong>Scope:</strong> Authentication service, session management, error handling</p>
+  </div>
+</div>
+
+::right::
+
+<div class="space-y-6">
+  <div v-click class="bg-slate-800/30 rounded-lg p-4 border border-slate-600">
+    <h3 class="text-lg font-semibold text-blue-400 mb-3">AI Prompting Strategy</h3>
+    <div class="text-sm text-gray-300 space-y-2">
+      <p>"Analyze this ticket description and provide:"</p>
+      <ul class="list-disc list-inside space-y-1 ml-4">
+        <li>Clear problem statement</li>
+        <li>Business impact assessment</li>
+        <li>Technical scope definition</li>
+        <li>User journey context</li>
+      </ul>
+    </div>
+  </div>
+
+  <div v-click class="bg-slate-800/30 rounded-lg p-4 border border-slate-600">
+    <h3 class="text-lg font-semibold text-purple-400 mb-3">Benefits</h3>
+    <div class="text-sm text-gray-300 space-y-1">
+      <div class="flex items-center">
+        <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+        <span>Reduces back-and-forth clarifications</span>
+      </div>
+      <div class="flex items-center">
+        <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+        <span>Improves estimation accuracy</span>
+      </div>
+      <div class="flex items-center">
+        <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+        <span>Enables better sprint planning</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+transition: fade-out
+layout: center
+class: ai-professional-bg standard-layout
+---
+
+# Acceptance Criteria Generation
+
+<div class="text-center space-y-8">
+  <div class="slide-header">
+    <div class="flex items-center justify-center mb-6">
+      <div class="text-4xl mr-3">✅</div>
+    </div>
+    <div class="subtitle text-gray-300">From description to definition of done</div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+    <div v-click class="bg-gradient-to-br from-slate-800/40 to-slate-900/40 rounded-lg p-6 border border-slate-600">
+      <h3 class="text-xl font-semibold text-blue-400 mb-4">Functional Criteria</h3>
+      <div class="text-left space-y-2 text-sm text-gray-300">
+        <div class="flex items-start">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>User can successfully authenticate with valid credentials</span>
+        </div>
+        <div class="flex items-start">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>Invalid credentials show appropriate error message</span>
+        </div>
+        <div class="flex items-start">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>Session persists for configured timeout period</span>
+        </div>
+        <div class="flex items-start">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>Failed attempts trigger rate limiting after 5 tries</span>
+        </div>
+      </div>
+    </div>
+    <div v-click class="bg-gradient-to-br from-slate-800/40 to-slate-900/40 rounded-lg p-6 border border-slate-600">
+      <h3 class="text-xl font-semibold text-purple-400 mb-4">Non-Functional Criteria</h3>
+      <div class="text-left space-y-2 text-sm text-gray-300">
+        <div class="flex items-start">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>Login response time < 2 seconds</span>
+        </div>
+        <div class="flex items-start">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>Success rate > 99% under normal load</span>
+        </div>
+        <div class="flex items-start">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>Passwords encrypted in transit and at rest</span>
+        </div>
+        <div class="flex items-start">
+          <span class="text-green-400 mr-2">✓</span>
+          <span>Accessible via keyboard navigation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div v-click class="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4 max-w-3xl mx-auto">
+    <div class="text-yellow-400 font-semibold mb-2">💡 Pro Tip</div>
+    <div class="text-gray-300 text-sm">
+      AI can generate both happy path and edge case scenarios you might have missed. 
+      It's like having a QA engineer review your requirements before development starts!
+    </div>
+  </div>
+</div>
+
+---
+transition: fade-out
+layout: two-cols
+class: ai-circuit-bg standard-layout
+---
+
+# Test Requirements Planning
+
+<div class="slide-header mb-6">
+  <div class="flex items-center mb-4">
+    <div class="text-3xl mr-3">🧪</div>
+  </div>
+  <div class="subtitle text-gray-300">Automated and manual testing roadmap</div>
+</div>
+
+## Automated Test Requirements
+
+<div v-click class="space-y-3">
+  <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-3">
+    <h4 class="text-green-400 font-semibold mb-2">Unit Tests</h4>
+    <div class="text-sm text-gray-300 space-y-1">
+      <div>• Authentication service methods</div>
+      <div>• Password validation logic</div>
+      <div>• Session token generation</div>
+    </div>
+  </div>
+
+  <div class="bg-blue-900/20 border border-blue-500/30 rounded-lg p-3">
+    <h4 class="text-blue-400 font-semibold mb-2">Integration Tests</h4>
+    <div class="text-sm text-gray-300 space-y-1">
+      <div>• Database connectivity</div>
+      <div>• External OAuth providers</div>
+      <div>• Rate limiting middleware</div>
+    </div>
+  </div>
+
+  <div class="bg-purple-900/20 border border-purple-500/30 rounded-lg p-3">
+    <h4 class="text-purple-400 font-semibold mb-2">E2E Tests</h4>
+    <div class="text-sm text-gray-300 space-y-1">
+      <div>• Complete login flow</div>
+      <div>• Session management</div>
+      <div>• Cross-browser compatibility</div>
+    </div>
+  </div>
+</div>
+
+::right::
+
+## Manual Test Scenarios
+
+<div v-click class="space-y-3">
+  <div class="bg-orange-900/20 border border-orange-500/30 rounded-lg p-3">
+    <h4 class="text-orange-400 font-semibold mb-2">Exploratory Testing</h4>
+    <div class="text-sm text-gray-300 space-y-1">
+      <div>• Unusual input combinations</div>
+      <div>• Network interruption scenarios</div>
+      <div>• Concurrent session handling</div>
+    </div>
+  </div>
+
+  <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-3">
+    <h4 class="text-red-400 font-semibold mb-2">Security Testing</h4>
+    <div class="text-sm text-gray-300 space-y-1">
+      <div>• SQL injection attempts</div>
+      <div>• Brute force protection</div>
+      <div>• Session fixation attacks</div>
+    </div>
+  </div>
+
+  <div class="bg-cyan-900/20 border border-cyan-500/30 rounded-lg p-3">
+    <h4 class="text-cyan-400 font-semibold mb-2">Usability Testing</h4>
+    <div class="text-sm text-gray-300 space-y-1">
+      <div>• Error message clarity</div>
+      <div>• Mobile responsiveness</div>
+      <div>• Accessibility compliance</div>
+    </div>
+  </div>
+</div>
+
+<div v-click class="mt-6 bg-slate-800/30 rounded-lg p-4 border border-slate-600">
+  <h4 class="text-yellow-400 font-semibold mb-2">🎯 Testing Strategy</h4>
+  <div class="text-sm text-gray-300">
+    AI can suggest the optimal test pyramid distribution: 70% unit, 20% integration, 10% E2E, 
+    plus manual testing focus areas based on risk analysis.
+  </div>
+</div>
+
+---
+transition: fade-out
+layout: center
+class: ai-professional-bg standard-layout
+---
+
+# Before & After: Ticket Quality
+
+<div class="space-y-8">
+  <div class="slide-header text-center">
+    <div class="flex items-center justify-center mb-6">
+      <div class="text-4xl mr-3">🔄</div>
+    </div>
+    <div class="subtitle text-gray-300">Real ticket improvements with AI assistance</div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <!-- Before Column -->
+    <div class="space-y-4">
+      <h2 v-click class="text-xl font-semibold text-red-400 text-center">😬 Before</h2>
+      <div v-click class="bg-red-900/20 border border-red-500/30 rounded-lg p-4">
+        <div class="font-mono text-red-400 text-xs mb-2">TICKET-234</div>
+        <div class="font-semibold text-white mb-2">Dashboard slow</div>
+        <div class="text-gray-400 text-sm mb-4">Takes forever to load. Fix it.</div>
+        <div class="space-y-2 text-xs">
+          <div class="text-gray-500">Acceptance Criteria: Make it fast</div>
+          <div class="text-gray-500">Test Plan: Click and see if it's faster</div>
+        </div>
+      </div>
+      <div v-click class="bg-red-900/20 border border-red-500/30 rounded-lg p-4">
+        <div class="font-mono text-red-400 text-xs mb-2">TICKET-456</div>
+        <div class="font-semibold text-white mb-2">Button doesn't work</div>
+        <div class="text-gray-400 text-sm mb-4">The submit button is broken sometimes.</div>
+        <div class="space-y-2 text-xs">
+          <div class="text-gray-500">Acceptance Criteria: Button works</div>
+          <div class="text-gray-500">Test Plan: Test the button</div>
+        </div>
+      </div>
+    </div>
+    <!-- After Column -->
+    <div class="space-y-4">
+      <h2 v-click class="text-xl font-semibold text-green-400 text-center">✨ After</h2>
+      <div v-click class="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
+        <div class="font-mono text-green-400 text-xs mb-2">TICKET-234</div>
+        <div class="font-semibold text-white mb-2">Optimize dashboard load performance</div>
+        <div class="text-gray-300 text-sm mb-4">
+          <strong>Problem:</strong> Dashboard initial load time >8s affecting user engagement<br/>
+          <strong>Impact:</strong> 23% user drop-off during dashboard loading<br/>
+          <strong>Scope:</strong> API optimization, caching strategy, UI lazy loading
+        </div>
+        <div class="space-y-1 text-xs">
+          <div class="text-green-300"><strong>AC:</strong> Load time <3s, lazy load widgets, error states</div>
+          <div class="text-green-300"><strong>Tests:</strong> Performance, caching, error handling</div>
+        </div>
+      </div>
+      <div v-click class="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
+        <div class="font-mono text-green-400 text-xs mb-2">TICKET-456</div>
+        <div class="font-semibold text-white mb-2">Resolve form submission failures</div>
+        <div class="text-gray-300 text-sm mb-4">
+          <strong>Problem:</strong> Submit button becomes unresponsive in 12% of form submissions<br/>
+          <strong>Trigger:</strong> Network timeouts, validation errors, concurrent requests<br/>
+          <strong>User Impact:</strong> Data loss, frustration, duplicate submissions
+        </div>
+        <div class="space-y-1 text-xs">
+          <div class="text-green-300"><strong>AC:</strong> Button state mgmt, timeout handling, validation feedback</div>
+          <div class="text-green-300"><strong>Tests:</strong> Unit, integration, timeout simulation, accessibility</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+transition: fade-out
+layout: center
+class: ai-circuit-bg standard-layout
+---
+
+# Practical Templates & Tips
+
+<div class="space-y-8">
+  <div class="slide-header text-center">
+    <div class="flex items-center justify-center mb-6">
+      <div class="text-4xl mr-3">📋</div>
+    </div>
+    <div class="subtitle text-gray-300">Prompts and workflows for consistent ticket quality</div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <div v-click class="bg-slate-800/40 rounded-lg p-6 border border-slate-600">
+      <h3 class="text-xl font-semibold text-blue-400 mb-4">🤖 AI Prompt Template</h3>
+      <div class="bg-slate-900/50 rounded p-4 text-sm font-mono text-gray-300">
+        <div class="text-green-400 mb-2"># Ticket Enhancement Prompt</div>
+        <div class="space-y-1">
+          <div>Analyze this ticket: "[PASTE_TICKET]"</div>
+          <div>&nbsp;</div>
+          <div>Provide:</div>
+          <div>1. Clear problem statement</div>
+          <div>2. Business impact assessment</div>
+          <div>3. Technical scope & dependencies</div>
+          <div>4. Acceptance criteria (functional & non-functional)</div>
+          <div>5. Testing strategy (auto + manual)</div>
+          <div>6. Risk assessment & edge cases</div>
+        </div>
+      </div>
+    </div>
+    <div v-click class="bg-slate-800/40 rounded-lg p-6 border border-slate-600">
+      <h3 class="text-xl font-semibold text-purple-400 mb-4">⚡ Quick Workflow</h3>
+      <div class="space-y-3">
+        <div class="flex items-start">
+          <div class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">1</div>
+          <div class="text-sm">
+            <div class="font-semibold text-white">Paste original ticket</div>
+            <div class="text-gray-400">Into AI chat with enhancement prompt</div>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">2</div>
+          <div class="text-sm">
+            <div class="font-semibold text-white">Review & refine</div>
+            <div class="text-gray-400">AI suggestions with domain knowledge</div>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">3</div>
+          <div class="text-sm">
+            <div class="font-semibold text-white">Update ticket system</div>
+            <div class="text-gray-400">Copy enhanced content back to JIRA/etc</div>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">4</div>
+          <div class="text-sm">
+            <div class="font-semibold text-white">Team review</div>
+            <div class="text-gray-400">Validate with stakeholders</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div v-click class="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-6 max-w-4xl mx-auto">
+    <div class="text-center">
+      <div class="text-yellow-400 font-semibold text-lg mb-2">🎯 Result</div>
+      <div class="text-gray-300">
+        Transform 5-minute "quick tickets" into comprehensive, testable, estimatable work items. <br/>
+        <span class="text-blue-400 font-medium">Your future self (and your team) will thank you.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
 transition: fade-out
 layout: two-cols
 class: ai-circuit-bg standard-layout
@@ -561,15 +971,15 @@ Slidev comes with powerful theming support. Themes can provide styles, layouts, 
 <div grid="~ cols-2 gap-2" m="t-2">
 
 ```yaml
----
+# frontmatter
 theme: default
----
+# end frontmatter
 ```
 
 ```yaml
----
+# frontmatter  
 theme: seriph
----
+# end frontmatter
 ```
 
 <img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
