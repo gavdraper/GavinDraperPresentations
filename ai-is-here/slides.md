@@ -270,65 +270,55 @@ class: ai-circuit-bg standard-layout
 
 # Improving Ticket Descriptions
 
-<div class="slide-header mb-6">
-  <div class="flex items-center mb-4">
-    <div class="text-3xl mr-3">📝</div>
-  </div>
-  <div class="subtitle text-gray-300">Transform unclear requirements into actionable stories</div>
-</div>
-
 ## Before: The Classic Engineer Special
 
-<div v-click class="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-4">
-  <div class="text-red-400 font-mono text-sm mb-2">TICKET-001</div>
-  <div class="text-white font-semibold mb-2">Fix login bug</div>
-  <div class="text-gray-400 text-sm">
+<div v-click class="bg-red-900/20 border border-red-500/30 rounded-lg p-2 mb-2">
+  <div class="text-red-400 font-mono text-xs mb-1">TICKET-001</div>
+  <div class="text-white font-semibold text-sm">Fix login bug</div>
+  <div class="text-gray-400 text-xs">
     Description: "Users can't login sometimes. It's broken."
   </div>
 </div>
 
 ## After: AI-Enhanced Clarity
 
-<div v-click class="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
-  <div class="text-green-400 font-mono text-sm mb-2">TICKET-001</div>
-  <div class="text-white font-semibold mb-2">Resolve intermittent authentication failures</div>
-  <div class="text-gray-300 text-sm space-y-2">
-    <p><strong>Issue:</strong> Users experience login failures approximately 15% of the time</p>
-    <p><strong>Impact:</strong> Affects user acquisition and retention metrics</p>
-    <p><strong>Scope:</strong> Authentication service, session management, error handling</p>
+<div v-click class="bg-green-900/20 border border-green-500/30 rounded-lg p-2">
+  <div class="text-green-400 font-mono text-xs mb-1">TICKET-001</div>
+  <div class="text-white font-semibold text-sm">Resolve intermittent authentication failures</div>
+  <div class="text-gray-300 text-xs space-y-1">
+    <p><strong>Issue:</strong> Users experience login failures ~15% of time</p>
+    <p><strong>Impact:</strong> Affects user acquisition and retention</p>
+    <p><strong>Scope:</strong> Auth service, session mgmt, error handling</p>
   </div>
 </div>
 
 ::right::
 
-<div class="space-y-6">
-  <div v-click class="bg-slate-800/30 rounded-lg p-4 border border-slate-600">
-    <h3 class="text-lg font-semibold text-blue-400 mb-3">AI Prompting Strategy</h3>
-    <div class="text-sm text-gray-300 space-y-2">
-      <p>"Analyze this ticket description and provide:"</p>
-      <ul class="list-disc list-inside space-y-1 ml-4">
+<div class="space-y-3">
+  <div v-click class="bg-slate-800/30 rounded-lg p-2 border border-slate-600">
+    <h3 class="text-sm font-semibold text-blue-400 mb-1">AI Prompting Strategy</h3>
+    <div class="text-xs text-gray-300">
+      <p class="mb-1">"Analyze this ticket and provide:"</p>
+      <ul class="list-disc list-inside space-y-0 ml-2 text-xs">
         <li>Clear problem statement</li>
-        <li>Business impact assessment</li>
-        <li>Technical scope definition</li>
+        <li>Business impact</li>
+        <li>Technical scope</li>
         <li>User journey context</li>
       </ul>
     </div>
   </div>
 
-  <div v-click class="bg-slate-800/30 rounded-lg p-4 border border-slate-600">
-    <h3 class="text-lg font-semibold text-purple-400 mb-3">Benefits</h3>
-    <div class="text-sm text-gray-300 space-y-1">
+  <div v-click class="bg-slate-800/30 rounded-lg p-2 border border-slate-600">
+    <h3 class="text-sm font-semibold text-purple-400 mb-1">Benefits</h3>
+    <div class="text-xs text-gray-300">
       <div class="flex items-center">
-        <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-        <span>Reduces back-and-forth clarifications</span>
+        <span>• Reduces clarifications</span>
       </div>
       <div class="flex items-center">
-        <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-        <span>Improves estimation accuracy</span>
+        <span>• Improves estimation</span>
       </div>
       <div class="flex items-center">
-        <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-        <span>Enables better sprint planning</span>
+        <span>• Better sprint planning</span>
       </div>
     </div>
   </div>
